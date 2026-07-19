@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "status": "new",
+    "createdAt": "2026-07-19T07:50:15.681Z",
+    "name": "Ramesh",
+    "company": "",
+    "email": "",
+    "phone": "9998887777",
+    "chemical": "Caustic Soda",
+    "quantity": "200",
+    "unit": "kg",
+    "industry": "",
+    "message": ""
+  }
+]
