@@ -9,7 +9,7 @@ if (ticketDate) {
   });
 }
 
-// Rotating hero label ticket — cycles through a few stock chemicals
+// Hero Ticket Rotation
 const heroTickets = [
   { name: "Hydrochloric Acid, 32%", hazard: "Corrosive", cas: "7647-01-0", purity: "32% ± 0.5%", packing: "35 kg Carboy", batch: "HE-2026-0714" },
   { name: "Caustic Soda, Flakes", hazard: "Corrosive", cas: "1310-73-2", purity: "98% min", packing: "50 kg Bag", batch: "HE-2026-0522" },
@@ -70,7 +70,6 @@ const heroTickets = [
   }
 
   dots.forEach((dot, i) => {
-    dot.style.cursor = "pointer";
     dot.addEventListener("click", () => {
       if (i === index) return;
       index = i;
@@ -82,22 +81,6 @@ const heroTickets = [
     });
   });
 })();
-
-// Mobile nav toggle
-const navToggle = document.getElementById("navToggle");
-const siteNav = document.getElementById("siteNav");
-if (navToggle && siteNav) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = siteNav.classList.toggle("is-open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-  siteNav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      siteNav.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
-    });
-  });
-}
 
 // Scroll reveal
 const revealEls = document.querySelectorAll(".reveal");
