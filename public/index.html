@@ -7,17 +7,27 @@
 <meta name="description" content="Hit Enterprise supplies industrial acids, alkalis and solvents in bulk and retail quantities to textile, pharma, water treatment and manufacturing industries. Request a chemical online.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- TOP STATUS BAR -->
+
+
+<!-- HEADER -->
 <header class="site-header">
-  <div class="wrap">
+  <div class="wrap header-inner">
     <a href="#top" class="logo">
-      <span class="logo-mark"></span>
-      HIT ENTERPRISE
-      <small>CHEMICAL SUPPLY CO.</small>
+      <div class="logo-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="brand-name">HIT ENTERPRISE</span>
+        <span class="brand-tag">CHEMICAL SUPPLY CO.</span>
+      </div>
     </a>
     <nav class="nav" id="siteNav">
       <a href="#about">About</a>
@@ -28,7 +38,10 @@
     </nav>
     <div class="header-cta">
       <a class="header-phone" href="tel:+910000000000">+91 00000 00000</a>
-      <a class="btn btn-primary" href="#request">Request Chemical</a>
+      <a class="btn btn-accent" href="#request">
+        <span>Request Chemical</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
     </div>
   </div>
@@ -38,14 +51,14 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="wrap">
+    <div class="wrap hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow">Bhavnagar, Gujarat &mdash; Since 2010</span>
+        <span class="badge">Bhavnagar, Gujarat &mdash; Since 2010</span>
         <h1>Industrial chemicals,<br><em>supplied on spec.</em></h1>
         <p class="hero-lede">Hit Enterprise sources, tests and delivers acids, alkalis and solvents for textile, pharma, water treatment and manufacturing plants across Gujarat &mdash; every batch backed by a certificate of analysis.</p>
         <div class="hero-actions">
-          <a href="#request" class="btn btn-accent">Request a Chemical</a>
-          <a href="#products" class="btn btn-ghost">View Product List</a>
+          <a href="#request" class="btn btn-accent btn-lg">Request a Chemical</a>
+          <a href="#products" class="btn btn-outline btn-lg">View Product List</a>
         </div>
         <div class="hero-stats">
           <div class="hero-stat"><strong>40+</strong><span>Chemicals Stocked</span></div>
@@ -55,21 +68,23 @@
       </div>
 
       <div class="hero-visual">
-        <div class="label-ticket" id="heroTicket">
-          <div class="label-ticket-top">
-            <span>Consignment Label</span>
-            <span class="hazard-chip" id="ticketHazard">Corrosive</span>
+        <div class="spec-card" id="heroTicket">
+          <div class="spec-card-header">
+            <span class="spec-badge">Consignment Specification</span>
+            <span class="hazard-badge" id="ticketHazard">Corrosive</span>
           </div>
-          <h4 id="ticketName">Hydrochloric Acid, 32%</h4>
-          <div class="label-row"><span>CAS No.</span><b id="ticketCas">7647-01-0</b></div>
-          <div class="label-row"><span>Purity</span><b id="ticketPurity">32% ± 0.5%</b></div>
-          <div class="label-row"><span>Packing</span><b id="ticketPacking">35 kg Carboy</b></div>
-          <div class="label-row"><span>Batch</span><b id="ticketBatch">HE-2026-0714</b></div>
-          <div class="label-ticket-foot">
+          <h3 id="ticketName">Hydrochloric Acid, 32%</h3>
+          <div class="spec-details">
+            <div class="spec-row"><span>CAS No.</span><b id="ticketCas">7647-01-0</b></div>
+            <div class="spec-row"><span>Purity</span><b id="ticketPurity">32% ± 0.5%</b></div>
+            <div class="spec-row"><span>Packing</span><b id="ticketPacking">35 kg Carboy</b></div>
+            <div class="spec-row"><span>Batch</span><b id="ticketBatch">HE-2026-0714</b></div>
+          </div>
+          <div class="spec-card-footer">
             <div class="barcode" aria-hidden="true">
-              <span style="height:26px"></span><span style="height:14px"></span><span style="height:22px"></span><span style="height:10px"></span><span style="height:26px"></span><span style="height:18px"></span><span style="height:24px"></span><span style="height:12px"></span><span style="height:20px"></span><span style="height:26px"></span>
+              <span style="height:24px"></span><span style="height:14px"></span><span style="height:20px"></span><span style="height:10px"></span><span style="height:24px"></span><span style="height:18px"></span><span style="height:22px"></span><span style="height:12px"></span><span style="height:18px"></span><span style="height:24px"></span>
             </div>
-            <span style="font-size:11px;color:var(--color-ink-soft)">Hit Enterprise · QC Passed</span>
+            <span style="font-size:11px;color:var(--text-muted);font-family:var(--font-mono)">Hit Enterprise · QC Passed</span>
           </div>
           <div class="ticket-dots" id="ticketDots" aria-hidden="true"></div>
         </div>
@@ -79,7 +94,7 @@
 
   <!-- TRUST BAR -->
   <div class="trust-bar">
-    <div class="wrap">
+    <div class="wrap trust-grid">
       <div class="trust-item"><b>GST Registered</b>&nbsp;Distributor</div>
       <div class="trust-item">Batch-Tested <b>Certificates of Analysis</b></div>
       <div class="trust-item"><b>Bulk &amp; Retail</b> Quantities</div>
@@ -91,8 +106,8 @@
   <section class="section" id="about">
     <div class="wrap about-grid">
       <div class="about-copy reveal">
-        <span class="eyebrow">About Us</span>
-        <h2 style="margin-top:12px;">A regional supply partner your production line can rely on</h2>
+        <span class="section-subtitle">ABOUT US</span>
+        <h2 style="margin-top:8px;">A regional supply partner your production line can rely on</h2>
         <p>Hit Enterprise stocks and distributes industrial-grade acids, alkalis, solvents and water-treatment chemicals from our facility in Bhavnagar, Gujarat. We work directly with manufacturers to keep pricing competitive and lead times short.</p>
         <p>Every drum and carboy that leaves our warehouse is checked against its certificate of analysis before dispatch, so what arrives at your plant matches what you ordered &mdash; batch after batch.</p>
       </div>
@@ -106,75 +121,76 @@
   </section>
 
   <!-- PRODUCTS -->
-  <section class="section" id="products" style="background:var(--color-panel); border-top:1px solid var(--color-line); border-bottom:1px solid var(--color-line);">
+  <section class="section section-dark" id="products">
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Product Range</span>
+      <div class="section-header reveal">
+        <span class="section-subtitle">PRODUCT RANGE</span>
         <h2>Core chemicals, in stock and ready to move</h2>
         <p>Don't see what you need on this list? Use the request form below &mdash; we source beyond our standard catalogue too.</p>
       </div>
-      <div class="product-grid">
+
+      <div class="catalog-grid">
 
         <div class="product-card reveal">
-          <div class="product-card-top"><h3>Hydrochloric Acid</h3><span class="product-cas">7647-01-0</span></div>
+          <div class="p-card-top"><h3>Hydrochloric Acid</h3><span class="p-cas">7647-01-0</span></div>
           <p>Industrial-grade HCl for pH control, descaling and textile processing.</p>
-          <span class="product-spec">30–35% · Carboy / Tanker</span>
+          <span class="p-spec">30–35% · Carboy / Tanker</span>
           <a class="product-card-cta" href="#request" data-chemical="Hydrochloric Acid">Request this <span>→</span></a>
         </div>
 
         <div class="product-card reveal">
-          <div class="product-card-top"><h3>Sulphuric Acid</h3><span class="product-cas">7664-93-9</span></div>
+          <div class="p-card-top"><h3>Sulphuric Acid</h3><span class="p-cas">7664-93-9</span></div>
           <p>High-concentration H₂SO₄ for effluent treatment and chemical manufacturing.</p>
-          <span class="product-spec">98% · Drum / Tanker</span>
+          <span class="p-spec">98% · Drum / Tanker</span>
           <a class="product-card-cta" href="#request" data-chemical="Sulphuric Acid">Request this <span>→</span></a>
         </div>
 
         <div class="product-card reveal">
-          <div class="product-card-top"><h3>Caustic Soda (Flakes)</h3><span class="product-cas">1310-73-2</span></div>
+          <div class="p-card-top"><h3>Caustic Soda (Flakes)</h3><span class="p-cas">1310-73-2</span></div>
           <p>Sodium hydroxide flakes for soap, textile and water treatment applications.</p>
-          <span class="product-spec">98% min · 25/50 kg Bag</span>
+          <span class="p-spec">98% min · 25/50 kg Bag</span>
           <a class="product-card-cta" href="#request" data-chemical="Caustic Soda (Flakes)">Request this <span>→</span></a>
         </div>
 
         <div class="product-card reveal">
-          <div class="product-card-top"><h3>Sodium Hypochlorite</h3><span class="product-cas">7681-52-9</span></div>
+          <div class="p-card-top"><h3>Sodium Hypochlorite</h3><span class="p-cas">7681-52-9</span></div>
           <p>Liquid chlorine bleach for disinfection and water treatment plants.</p>
-          <span class="product-spec">10–12% · Carboy</span>
+          <span class="p-spec">10–12% · Carboy</span>
           <a class="product-card-cta" href="#request" data-chemical="Sodium Hypochlorite">Request this <span>→</span></a>
         </div>
 
         <div class="product-card reveal">
-          <div class="product-card-top"><h3>Poly Aluminium Chloride</h3><span class="product-cas">1327-41-9</span></div>
+          <div class="p-card-top"><h3>Poly Aluminium Chloride</h3><span class="p-cas">1327-41-9</span></div>
           <p>Coagulant (PAC) for municipal and industrial water clarification.</p>
-          <span class="product-spec">30% · 25 kg Bag</span>
+          <span class="p-spec">30% · 25 kg Bag</span>
           <a class="product-card-cta" href="#request" data-chemical="Poly Aluminium Chloride">Request this <span>→</span></a>
         </div>
 
         <div class="product-card reveal">
-          <div class="product-card-top"><h3>Alum (Aluminium Sulphate)</h3><span class="product-cas">10043-01-3</span></div>
+          <div class="p-card-top"><h3>Alum (Aluminium Sulphate)</h3><span class="p-cas">10043-01-3</span></div>
           <p>Coagulant used widely in water treatment and paper manufacturing.</p>
-          <span class="product-spec">17% Al₂O₃ · 50 kg Bag</span>
+          <span class="p-spec">17% Al₂O₃ · 50 kg Bag</span>
           <a class="product-card-cta" href="#request" data-chemical="Alum (Aluminium Sulphate)">Request this <span>→</span></a>
         </div>
 
         <div class="product-card reveal">
-          <div class="product-card-top"><h3>Sodium Sulphate</h3><span class="product-cas">7757-82-6</span></div>
+          <div class="p-card-top"><h3>Sodium Sulphate</h3><span class="p-cas">7757-82-6</span></div>
           <p>Glauber's salt used in textile dyeing and detergent manufacturing.</p>
-          <span class="product-spec">99% · 50 kg Bag</span>
+          <span class="p-spec">99% · 50 kg Bag</span>
           <a class="product-card-cta" href="#request" data-chemical="Sodium Sulphate">Request this <span>→</span></a>
         </div>
 
         <div class="product-card reveal">
-          <div class="product-card-top"><h3>Acetone</h3><span class="product-cas">67-64-1</span></div>
+          <div class="p-card-top"><h3>Acetone</h3><span class="p-cas">67-64-1</span></div>
           <p>Industrial solvent for cleaning, degreasing and paint formulation.</p>
-          <span class="product-spec">99.5% · Drum</span>
+          <span class="p-spec">99.5% · Drum</span>
           <a class="product-card-cta" href="#request" data-chemical="Acetone">Request this <span>→</span></a>
         </div>
 
         <div class="product-card reveal">
-          <div class="product-card-top"><h3>Calcium Chloride</h3><span class="product-cas">10043-52-4</span></div>
+          <div class="p-card-top"><h3>Calcium Chloride</h3><span class="p-cas">10043-52-4</span></div>
           <p>Flakes for dust control, de-icing and drilling fluid applications.</p>
-          <span class="product-spec">94% · 25 kg Bag</span>
+          <span class="p-spec">94% · 25 kg Bag</span>
           <a class="product-card-cta" href="#request" data-chemical="Calcium Chloride">Request this <span>→</span></a>
         </div>
 
@@ -185,8 +201,8 @@
   <!-- INDUSTRIES -->
   <section class="section" id="industries">
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Industries Served</span>
+      <div class="section-header reveal">
+        <span class="section-subtitle">INDUSTRIES SERVED</span>
         <h2>Built for plants that can't afford supply gaps</h2>
       </div>
       <div class="industry-strip reveal">
@@ -201,10 +217,10 @@
   </section>
 
   <!-- WHY US -->
-  <section class="section" id="why-us" style="background:var(--color-panel); border-top:1px solid var(--color-line); border-bottom:1px solid var(--color-line);">
+  <section class="section section-dark" id="why-us">
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Why Hit Enterprise</span>
+      <div class="section-header reveal">
+        <span class="section-subtitle">WHY HIT ENTERPRISE</span>
         <h2>What plant managers actually care about</h2>
       </div>
       <div class="reason-grid">
@@ -217,23 +233,23 @@
   </section>
 
   <!-- REQUEST FORM -->
-  <section class="section request-section" id="request">
+  <section class="section rfq-section" id="request">
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Request a Chemical</span>
-        <h2>Send us a requisition &mdash; we'll quote it within one business day</h2>
-        <p>Fill in the ticket. A member of our sales team will confirm pricing, packaging and delivery timeline by phone or email.</p>
+      <div class="section-header reveal">
+        <span class="section-subtitle accent">REQUEST A CHEMICAL</span>
+        <h2 style="color:#fff;">Send us a requisition &mdash; we'll quote it within one business day</h2>
+        <p style="color:var(--text-muted);">Fill in the ticket. A member of our sales team will confirm pricing, packaging and delivery timeline by phone or email.</p>
       </div>
 
-      <div class="request-grid">
+      <div class="rfq-grid">
         <div class="request-notes reveal">
-          <h3 style="color:#fff;">What happens next</h3>
+          <h3 style="color:#fff; font-size: 22px; margin-bottom: 12px;">What happens next</h3>
           <ul>
             <li>We check current stock and confirm purity/packaging options.</li>
             <li>You receive a quote by phone or email, usually same day.</li>
             <li>On confirmation, we dispatch with COA and transport documents.</li>
           </ul>
-          <p style="margin-top:24px; font-size:13px;">Prefer to talk it through first? Call <a href="tel:+910000000000" style="color:var(--color-accent); text-decoration:none;">+91 00000 00000</a></p>
+          <p style="margin-top:24px; font-size:14px; color:var(--text-muted);">Prefer to talk it through first? Call <a href="tel:+910000000000" style="color:var(--accent-cyan); text-decoration:none;">+91 00000 00000</a></p>
         </div>
 
         <form class="ticket-form reveal" id="requestForm" novalidate>
@@ -295,7 +311,7 @@
           </div>
           <div class="form-foot">
             <span class="form-note">By submitting, you agree to be contacted about this request.</span>
-            <button type="submit" class="btn btn-accent" id="submitBtn">Submit Request</button>
+            <button type="submit" class="btn btn-accent btn-lg" id="submitBtn">Submit Request</button>
           </div>
           <div class="form-status" id="formStatus"></div>
         </form>
@@ -306,8 +322,8 @@
   <!-- CONTACT -->
   <section class="section" id="contact">
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Contact</span>
+      <div class="section-header reveal">
+        <span class="section-subtitle">CONTACT</span>
         <h2>Reach the sales desk directly</h2>
       </div>
       <div class="contact-grid">
