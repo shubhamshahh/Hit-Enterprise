@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executive Admin Dashboard | Hit Enterprise</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=10">
+</head>
+<body class="admin-body">
+
+<!-- LOGIN SCREEN -->
+<div id="loginScreen" class="login-wrapper">
+  <div class="login-card">
+    <div class="login-header">
+      <div class="logo-mark">H</div>
+      <div>
+        <h2>Hit Enterprise</h2>
+        <p class="login-subtitle">Executive Portal Access</p>
+      </div>
+    </div>
+    <div class="login-form">
+      <label for="passwordInput">Admin Password</label>
+      <input type="password" id="passwordInput" placeholder="Enter password..." autocomplete="current-password">
+      <button class="btn btn-primary btn-block" id="loginBtn">Log In to Dashboard</button>
+      <div class="login-error" id="loginError">Incorrect password. Please try again.</div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN ADMIN DASHBOARD -->
+<div id="adminScreen" class="admin-layout" style="display:none;">
+  <!-- TOP NAVIGATION BAR -->
+  <header class="admin-topbar">
+    <div class="admin-topbar-brand">
+      <div class="logo-mark small">H</div>
+      <div>
+        <span class="brand-title">Hit Enterprise</span>
+        <span class="brand-badge">Admin Portal</span>
+      </div>
+    </div>
+
+    <!-- DASHBOARD TABS -->
+    <nav class="admin-tabs">
+      <button class="tab-btn active" data-tab="overview">
+        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+        Overview
+      </button>
+      <button class="tab-btn" data-tab="inquiries">
+        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/></svg>
+        Inquiries & Quotes <span class="badge-count" id="newInquiriesBadge">0</span>
+      </button>
+      <button class="tab-btn" data-tab="products">
+        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L5.6 15.12a2 2 0 00-1.168.17L2 16.5V21h20v-4.5l-2.572-1.072zM12 3a4 4 0 100 8 4 4 0 000-8z"/></svg>
+        Product Catalog
+      </button>
+      <button class="tab-btn" data-tab="settings">
+        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+        Alerts & Settings
+      </button>
+    </nav>
+
+    <div class="admin-topbar-actions">
+      <button class="btn btn-theme-toggle" id="themeToggleBtn">☀️ Light Mode</button>
+      <button class="btn btn-secondary btn-sm" id="exportCsvBtn">
+        <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        Export CSV
+      </button>
+      <button class="btn btn-ghost btn-sm" id="logoutBtn">Log Out</button>
+    </div>
+  </header>
+
+  <!-- DASHBOARD CONTENT AREA -->
+  <main class="admin-main">
+
+    <!-- TAB 1: OVERVIEW & ANALYTICS -->
+    <section id="tab-overview" class="tab-pane active">
+      <div class="pane-header">
+        <div>
+          <h2>Executive Overview</h2>
+          <p class="pane-subtitle">Real-time performance metrics and chemical inquiry volume.</p>
+        </div>
+        <button class="btn btn-secondary btn-sm" id="refreshStatsBtn">🔄 Refresh Data</button>
+      </div>
+
+      <!-- KPI METRIC CARDS -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon blue">📊</div>
+          <div class="kpi-content">
+            <span class="kpi-label">Total Inquiries</span>
+            <span class="kpi-value" id="kpiTotal">0</span>
+            <span class="kpi-meta">All-time quote submissions</span>
+          </div>
+        </div>
+
+        <div class="kpi-card highlight">
+          <div class="kpi-icon yellow">🔔</div>
+          <div class="kpi-content">
+            <span class="kpi-label">New Requests</span>
+            <span class="kpi-value" id="kpiNew">0</span>
+            <span class="kpi-meta">Awaiting follow-up</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon teal">💬</div>
+          <div class="kpi-content">
+            <span class="kpi-label">Active Quotes</span>
+            <span class="kpi-value" id="kpiActive">0</span>
+            <span class="kpi-meta">Contacted & Quoted leads</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon green">🧪</div>
+          <div class="kpi-content">
+            <span class="kpi-label">Top Requested Chemical</span>
+            <span class="kpi-value small" id="kpiTopChemical">Loading...</span>
+            <span class="kpi-meta">Highest demand product</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECENT ACTIVITY SECTION -->
+      <div class="activity-section">
+        <div class="activity-header">
+          <h3>Recent Quote Inquiries</h3>
+          <button class="btn btn-link btn-sm" id="viewAllInquiriesBtn">View all inquiries &rarr;</button>
+        </div>
+        <div id="recentTableWrap" class="table-card"></div>
+      </div>
+    </section>
+
+    <!-- TAB 2: INQUIRIES & QUOTES -->
+    <section id="tab-inquiries" class="tab-pane">
+      <div class="pane-header">
+        <div>
+          <h2>Chemical Request Pipeline</h2>
+          <p class="pane-subtitle">Manage incoming customer quotes, update statuses, & send direct WhatsApp replies.</p>
+        </div>
+      </div>
+
+      <!-- SEARCH & FILTER CONTROLS -->
+      <div class="filter-bar">
+        <div class="search-input-wrap">
+          <svg class="search-icon" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <input type="text" id="searchInput" placeholder="Search by name, chemical, phone, company, or industry...">
+        </div>
+        
+        <div class="status-filters" id="statusFilterGroup">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="new">New</button>
+          <button class="filter-tab" data-filter="contacted">Contacted</button>
+          <button class="filter-tab" data-filter="quoted">Quoted</button>
+          <button class="filter-tab" data-filter="closed">Closed</button>
+        </div>
+      </div>
+
+      <!-- INQUIRIES DATA TABLE -->
+      <div id="inquiriesTableWrap" class="table-card"></div>
+    </section>
+
+    <!-- TAB 3: PRODUCT CATALOGUE -->
+    <section id="tab-products" class="tab-pane">
+      <div class="pane-header">
+        <div>
+          <h2>Chemical Product Catalog</h2>
+          <p class="pane-subtitle">Manage products listed on the main website catalog.</p>
+        </div>
+        <button class="btn btn-primary btn-sm" id="addProductBtn">+ Add New Chemical Product</button>
+      </div>
+
+      <div id="productsTableWrap" class="table-card"></div>
+    </section>
+
+    <!-- TAB 4: ALERTS & SETTINGS -->
+    <section id="tab-settings" class="tab-pane">
+      <div class="pane-header">
+        <div>
+          <h2>Real-Time Admin Phone Alerts</h2>
+          <p class="pane-subtitle">Verify your instant phone notification channels whenever a customer submits a new inquiry.</p>
+        </div>
+      </div>
+
+      <div class="settings-grid">
+        <div class="settings-card">
+          <h3>📱 Test Real-Time Admin Phone Alert</h3>
+          <p>Click below to fire a test notification to your phone and verify your instant WhatsApp / Telegram setup.</p>
+          <div class="test-notify-box" style="margin-top:16px;">
+            <button class="btn btn-primary" id="testNotifyBtn">⚡ Send Test Alert to Admin Phone</button>
+            <div id="testNotifyResult" class="notify-result"></div>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <h3>⚙️ Direct Notification Channel Options</h3>
+          <p>The system automatically pings your phone upon new customer form submissions. Supported channels:</p>
+          <ul style="margin-top:12px; padding-left:20px; line-height:1.8; color:var(--adm-text-sub);">
+            <li>🟢 <strong>Telegram Bot</strong>: 100% Free instant alerts via <code>TELEGRAM_BOT_TOKEN</code> & <code>TELEGRAM_CHAT_ID</code>.</li>
+            <li>💬 <strong>CallMeBot WhatsApp</strong>: Simple WhatsApp alert via <code>WHATSAPP_PHONE</code> & <code>WHATSAPP_APIKEY</code>.</li>
+            <li>📱 <strong>Meta WhatsApp Cloud API</strong>: Official WhatsApp Business API via Meta Developer Portal.</li>
+            <li>📞 <strong>Twilio SMS / WhatsApp</strong>: Enterprise SMS & WhatsApp notification integration.</li>
+            <li>✉️ <strong>Resend Email Alerts</strong>: Instant HTML lead summary emails sent to your admin inbox.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- PRODUCT MODAL -->
+<div id="productModal" class="modal-overlay" style="display:none;">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3 id="modalTitle">Add Chemical Product</h3>
+      <button class="modal-close" id="closeProductModal">&times;</button>
+    </div>
+    <div class="modal-body">
+      <form id="productForm">
+        <input type="hidden" id="prodId">
+        <div class="form-row">
+          <div class="form-group flex-2">
+            <label>Chemical Name *</label>
+            <input type="text" id="prodName" required placeholder="e.g. Hydrochloric Acid">
+          </div>
+          <div class="form-group flex-1">
+            <label>Category *</label>
+            <input type="text" id="prodCategory" required placeholder="e.g. Acids">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group flex-1">
+            <label>CAS Number</label>
+            <input type="text" id="prodCas" placeholder="e.g. 7647-01-0">
+          </div>
+          <div class="form-group flex-1">
+            <label>Grade / Specification</label>
+            <input type="text" id="prodGrade" placeholder="e.g. Technical Grade 37%">
+          </div>
+          <div class="form-group flex-1">
+            <label>Purity</label>
+            <input type="text" id="prodPurity" placeholder="e.g. 30% - 37%">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Packaging Options</label>
+          <input type="text" id="prodPackaging" placeholder="e.g. 30L Carboys, 200L HDPE Drums">
+        </div>
+        <div class="form-group">
+          <label>Key Applications</label>
+          <textarea id="prodApplications" rows="2" placeholder="e.g. Pickling, pH control, water treatment"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="cancelProductModal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- NOTES MODAL -->
+<div id="notesModal" class="modal-overlay" style="display:none;">
+  <div class="modal-card small">
+    <div class="modal-header">
+      <h3>Admin Sales Notes</h3>
+      <button class="modal-close" id="closeNotesModal">&times;</button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="notesInquiryId">
+      <p id="notesInquiryHeader" class="notes-inquiry-header"></p>
+      <div class="form-group">
+        <label>Internal Follow-up Notes</label>
+        <textarea id="adminNotesInput" rows="4" placeholder="Enter quote details, price offered, or follow-up notes..."></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="cancelNotesModal">Cancel</button>
+        <button type="button" class="btn btn-primary" id="saveNotesBtn">Save Notes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="admin.js?v=10"></script>
+</body>
+</html>

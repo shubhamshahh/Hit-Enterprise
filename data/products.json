@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "name": "EDTA",
+    "cas": "60-00-4",
+    "grade": "Technical Grade 99%",
+    "category": "Chelating Agents",
+    "purity": "99%",
+    "packaging": "25 kg Bag",
+    "applications": "Chelating agent used in water treatment, cleaning formulations and metal ion sequestration.",
+    "status": "active"
+  },
+  {
+    "id": 2,
+    "name": "Oxalic Acid",
+    "cas": "144-62-7",
+    "grade": "Industrial Grade 99.6%",
+    "category": "Acids",
+    "purity": "99.6%",
+    "packaging": "25 kg Bag",
+    "applications": "Bleaching, rust removal and metal surface cleaning agent.",
+    "status": "active"
+  },
+  {
+    "id": 3,
+    "name": "Caustic Lye (Sodium Hydroxide)",
+    "cas": "1310-73-2",
+    "grade": "Rayon / Tech Grade",
+    "category": "Alkalis",
+    "purity": "Liquid 48% / Flakes 98%",
+    "packaging": "Carboy / 50kg Bag",
+    "applications": "Sodium hydroxide for soap-making, textile processing and pH correction.",
+    "status": "active"
+  },
+  {
+    "id": 4,
+    "name": "Glycerine",
+    "cas": "56-81-5",
+    "grade": "Pharma / Tech Grade 99.5%",
+    "category": "Solvents",
+    "purity": "99.5%",
+    "packaging": "250 kg Drum",
+    "applications": "Humectant and industrial solvent for pharma, cosmetics and food-grade formulations.",
+    "status": "active"
+  },
+  {
+    "id": 5,
+    "name": "Morpholine",
+    "cas": "110-91-8",
+    "grade": "Industrial Grade 99%",
+    "category": "Specialty Chemicals",
+    "purity": "99%",
+    "packaging": "200 kg Drum",
+    "applications": "Corrosion inhibitor and chemical intermediate for rubber, dye and pharma industries.",
+    "status": "active"
+  },
+  {
+    "id": 6,
+    "name": "Potassium Carbonate / Hydroxide",
+    "cas": "584-08-7 / 1310-58-3",
+    "grade": "Tech Grade 99% / 90%",
+    "category": "Alkalis",
+    "purity": "99% / 90%",
+    "packaging": "25 kg Bag",
+    "applications": "Alkali used in glass, soap and general chemical manufacturing.",
+    "status": "active"
+  },
+  {
+    "id": 7,
+    "name": "Citric Acid",
+    "cas": "77-92-9",
+    "grade": "Anhydrous 99.5%",
+    "category": "Acids",
+    "purity": "99.5%",
+    "packaging": "25 kg Bag",
+    "applications": "Acidulant and chelating agent for food, pharma and cleaning applications.",
+    "status": "active"
+  },
+  {
+    "id": 8,
+    "name": "Sulphamic Acid",
+    "cas": "5329-14-6",
+    "grade": "Descaling Grade 99.5%",
+    "category": "Acids",
+    "purity": "99.5%",
+    "packaging": "25 kg Bag",
+    "applications": "Descaling and cleaning acid for industrial and domestic use.",
+    "status": "active"
+  },
+  {
+    "id": 9,
+    "name": "Zinc Dust",
+    "cas": "7440-66-6",
+    "grade": "Industrial Grade 98%",
+    "category": "Inorganics",
+    "purity": "98%",
+    "packaging": "25 kg Bag",
+    "applications": "Reducing agent for dye, paint and battery manufacturing.",
+    "status": "active"
+  },
+  {
+    "id": 10,
+    "name": "Hydrochloric Acid (HCl)",
+    "cas": "7647-01-0",
+    "grade": "Industrial Grade 30-35%",
+    "category": "Acids",
+    "purity": "30% - 35%",
+    "packaging": "30L Carboy / ISO Tanker",
+    "applications": "Industrial-grade HCl for pH control, descaling and textile processing.",
+    "status": "active"
+  },
+  {
+    "id": 11,
+    "name": "Lime (Powder / Lumps)",
+    "cas": "1305-78-8",
+    "grade": "High Calcium Oxide 90%",
+    "category": "Alkalis",
+    "purity": "90% CaO",
+    "packaging": "50 kg Bag",
+    "applications": "Calcium oxide for water treatment, construction and effluent neutralization.",
+    "status": "active"
+  },
+  {
+    "id": 12,
+    "name": "SMBS (Sodium Metabisulfite)",
+    "cas": "7681-57-4",
+    "grade": "Tech Grade 97%",
+    "category": "Salts",
+    "purity": "97%",
+    "packaging": "25 / 50 kg Bag",
+    "applications": "Reducing and bleaching agent for water treatment and textile dyeing.",
+    "status": "active"
+  },
+  {
+    "id": 13,
+    "name": "IPA (Isopropyl Alcohol)",
+    "cas": "67-63-0",
+    "grade": "Pure Grade 99.9%",
+    "category": "Solvents",
+    "purity": "99.9%",
+    "packaging": "160 kg Drum",
+    "applications": "Solvent and cleaning agent for pharma, electronics and sanitization.",
+    "status": "active"
+  },
+  {
+    "id": 14,
+    "name": "Toluene",
+    "cas": "108-88-3",
+    "grade": "Industrial Grade 99.5%",
+    "category": "Solvents",
+    "purity": "99.5%",
+    "packaging": "200 kg Drum",
+    "applications": "Industrial solvent for paints, coatings and adhesive formulations.",
+    "status": "active"
+  }
+]
